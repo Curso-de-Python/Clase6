@@ -12,8 +12,8 @@ temps = [[0.0 for h in range (24)] for d in range (31)]
 # Temperatura promedio al mediodía
 suma = 0.0
 
-for day in temps:
-  suma += day[11]
+for dia in temps:
+  suma += dia[11]
 
 promedio = suma / 31
 print("Temperatura promedio al mediodía:", promedio)
@@ -21,18 +21,18 @@ print("Temperatura promedio al mediodía:", promedio)
 # Temperatura más alta
 mas_alta = -100.0
 
-for day in temps:
-  for temp in day:
+for dia in temps:
+  for temp in dia:
     if temp > mas_alta:
       mas_alta = temp
 
 print("La temperatura más alta fue:", mas_alta)
 
 # El día más caluroso
-hotDays = 0
+diasCalurosos = 0
 
-for day in temps:
-  if day[11] > 20.0:
-    hotDays += 1
+for dia in temps:
+  if dia[11] > 20.0:
+    diasCalurosos += 1
 
-print(hotDays, " fueron los días calurosos.")
+print(diasCalurosos, " fueron los días calurosos.")
